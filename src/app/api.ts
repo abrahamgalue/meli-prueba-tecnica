@@ -1,5 +1,19 @@
 const api = {
   item: {
+    description: {
+      fetch: async (id: string) => {
+        const { plain_text } = await fetch(
+          `https://api.mercadolibre.com/items/${id}/description`
+        ).then(
+          res =>
+            res.json() as Promise<{
+              plain_text: string
+            }>
+        )
+
+        return plain_text
+      },
+    },
     fetch: async (id: string) => {
       const item = await fetch(`https://api.mercadolibre.com/items/${id}`).then(
         res =>
@@ -37,17 +51,8 @@ const api = {
           }>
       )
 
-      const { plain_text } = await fetch(
-        `https://api.mercadolibre.com/items/${id}/description`
-      ).then(
-        res =>
-          res.json() as Promise<{
-            plain_text: string
-          }>
-      )
       return {
         ...item,
-        description: plain_text,
       }
     },
     search: (query: string) =>

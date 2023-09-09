@@ -1,4 +1,5 @@
 import api from '@/app/api'
+import Description from '@/app/components/Description'
 
 export default async function ItemPage({
   params: { id },
@@ -28,7 +29,7 @@ export default async function ItemPage({
             })}
           </p>
           <hr />
-          <p className='productDescription'>{item.description}</p>
+          <Description id={id} />
         </div>
       </div>
     </section>
