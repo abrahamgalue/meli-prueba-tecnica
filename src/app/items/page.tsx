@@ -1,0 +1,56 @@
+// https://api.mercadolibre.com/sites/MLA/search?q=iphone&limit=4
+import Link from 'next/link'
+import api from '@/app/api'
+
+export default async function ItemsPage({
+  searchParams,
+}: {
+  searchParams: { search: string }
+}) {
+  const { results } = await api.item.search(searchParams.search)
+  const { filters } = await api.item.search(searchParams.search)
+  const bread = filters[0]?.values[0].path_from_root
+
+  function formatBread(index: number, length: number) {
+    return index < length - 1 ? ' > ' : null
+  }
+
+  return (
+    <section>
+      <span className='breadcrum'>
+        {bread?.map((category, index) => (
+          <span>
+            <a href={`/items?search=${category.name}`}>{category.name}</a>
+            {formatBread(index, bread.length)}
+          </span>
+        ))}
+      </span>
+      <article>
+        {results.map(item => (
+          <div>
+            <Link href={`/items/${item.id}`} key={item.id} className='product'>
+              <img
+                src={item.thumbnail}
+                alt={item.title}
+                width={160}
+                height={160}
+              />
+              <div>
+                <p className='productTitle'>{item.title}</p>
+                <p className='productPrice'>
+                  {Number(item.price).toLocaleString('es-AR', {
+                    style: 'currency',
+                    currency: item.currency_id,
+                  })}
+                </p>
+              </div>
+              <span className='productLocation'>
+                {item.seller_address.city.name.toLocaleLowerCase()}
+              </span>
+            </Link>
+          </div>
+        ))}
+      </article>
+    </section>
+  )
+}
