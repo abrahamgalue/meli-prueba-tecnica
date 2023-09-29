@@ -7,8 +7,7 @@ export default async function ItemsPage({
 }: {
   searchParams: { search: string }
 }) {
-  const { results } = await api.item.search(searchParams.search)
-  const { filters } = await api.item.search(searchParams.search)
+  const { results, filters } = await api.item.search(searchParams.search)
   const bread = filters[0]?.values[0].path_from_root
 
   function formatBread(index: number, length: number) {

@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
+import { Montserrat } from 'next/font/google'
 
 import './globals.css'
 import Link from 'next/link'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Meli - @abrahamgalue',
@@ -14,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={montserrat.className}>
       <body>
         <header className='header'>
           <div className='headerContainer'>

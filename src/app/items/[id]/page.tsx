@@ -14,15 +14,23 @@ export default async function ItemPage({
         <a href='/'>Volver al listado</a>
       </div>
       <div className='container'>
-        <figure>
-          <img src={item.pictures[0].secure_url} alt={item.title} width={350} />
+        <figure className='containerImages'>
+          {item.pictures?.map((picture, index) => (
+            <img
+              src={picture.secure_url}
+              alt={item.title}
+              key={index}
+              width={700}
+              height={500}
+            />
+          ))}
         </figure>
         <div>
           <p className='productCondition'>
             <span>{item.condition}</span> | +{item.sold_quantity} sold
           </p>
-          <p className='productTitle'>{item.title}</p>
-          <p className='productPrice'>
+          <p className='productTitleItem'>{item.title}</p>
+          <p className='productPriceItem'>
             {Number(item.price).toLocaleString('es-AR', {
               style: 'currency',
               currency: item.currency_id,
