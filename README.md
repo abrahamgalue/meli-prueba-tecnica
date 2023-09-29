@@ -1,3 +1,9 @@
-## Challenge of Mercadolibre
+<div align="center">
+  
+# 🛍 Next.js: Challenge of Mercadolibre
 
-Esta es una prueba técnica de mercadolibre hecha con Next js a modo de practica para poner en práctica mis conocimientos de este framework de React.
+</div>
+
+### 🐱‍🚀 Esta es una prueba técnica de mercadolibre hecha con Next.js
+
+Para practicar por primera vez con este framework de React.
