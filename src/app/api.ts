@@ -48,6 +48,15 @@ const api = {
                 secure_url: string
               }
             ]
+            seller_address: {
+              city: {
+                name: string
+              }
+              state: {
+                name: string
+              }
+            }
+            free_shipping: boolean
           }>
       )
 

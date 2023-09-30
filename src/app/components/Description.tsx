@@ -3,7 +3,12 @@ import api from '@/app/api'
 async function Description({ id }: { id: string }) {
   const description = await api.item.description.fetch(id)
 
-  return <p className='productDescription'>{description}</p>
+  return (
+    <div className='productDescription'>
+      <h2>Descripción</h2>
+      <p>{description}</p>
+    </div>
+  )
 }
 
 export default Description
