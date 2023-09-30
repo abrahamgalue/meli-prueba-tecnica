@@ -13,27 +13,34 @@ main {
   margin: 1rem;
 }
 
+/*
+===============
+Header
+===============
+*/
+
 .header {
-  height: 64px;
   background-color: rgb(255, 241, 89);
-  padding: 9px 14px 14px;
+  height: 64px;
   margin: 0 0 82px 0;
+  min-width: 1160px;
+  padding: 9px 14px 14px;
 }
 
 .headerContainer {
-  display: flex;
   align-items: center;
+  display: flex;
+  gap: 5px;
   justify-content: space-evenly;
   margin: 0 auto;
   max-width: 885px;
   min-width: 785px;
-  gap: 5px;
 }
 
 .logo {
+  color: rgb(113 63 18);
   font-size: 20px;
   text-decoration: none;
-  color: rgb(113 63 18);
 }
 
 .logo:visited {
@@ -41,17 +48,17 @@ main {
 }
 
 .field {
-  color: #333;
-  background-color: #fff;
-  padding: 4px;
-  display: flex;
   align-items: center;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: flex;
+  flex: 1;
+  height: 32px;
   justify-content: center;
   max-width: 580px;
-  height: 32px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  flex: 1;
+  padding: 4px;
 }
 
 .field:focus-within {
@@ -60,26 +67,27 @@ main {
 
 .field input {
   background-color: #fff;
-  color: rgb(34, 34, 34);
-  outline: 0;
   border: none;
-  height: 95%;
+  color: rgb(34, 34, 34);
   flex: 1;
-  padding: 0 14px;
   font-size: 16px;
+  height: 32px;
+  outline: 0;
+  padding: 0 14px;
 }
 
 .field input::placeholder {
   color: rgb(186, 186, 186);
+  font-weight: 200;
 }
 
 .field button {
-  border: none;
-  border-left: 1px solid rgb(186, 186, 186);
   background-color: #fff;
+  border-left: 1px solid rgb(186, 186, 186);
+  border: none;
   color: rgb(186, 186, 186);
-  outline: 0;
   font-weight: 700;
+  outline: 0;
   padding: 0;
 }
 
@@ -91,22 +99,23 @@ main {
   color: rgb(102, 102, 102);
 }
 
-article {
-  display: grid;
-  gap: 1rem;
-  background-color: white;
-  border-radius: 4px;
-  width: 885px;
+/*
+===============
+Product results
+===============
+*/
+
+section {
   margin: 0 auto;
 }
 
 .breadcrum {
-  display: block;
-  margin: 0 auto;
-  width: 885px;
-  padding: 12px 16px;
-  font-size: 14px;
   box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  width: 885px;
 }
 
 .breadcrum span {
@@ -125,26 +134,22 @@ article {
   color: rgb(0, 0, 0, 0.7);
 }
 
+article {
+  background-color: white;
+  border-radius: 4px;
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 885px;
+}
+
 .product {
+  border-bottom: 1px solid rgb(235, 235, 235);
+  color: black;
   display: flex;
   gap: 16px;
-  text-decoration: none;
-  color: black;
-  border-bottom: 1px solid rgb(235, 235, 235);
   padding: 1rem;
-}
-
-.productCondition {
-  margin: 0;
-  color: rgba(0, 0, 0, .55);
-  font-size: 14px;
-  font-weight: 400;
-  white-space: pre-wrap;
-  margin-bottom: 8px;
-}
-
-.productCondition span {
-  text-transform: capitalize;
+  text-decoration: none;
 }
 
 .productTitle {
@@ -152,7 +157,6 @@ article {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.3;
-  font-family: "Proxima Nova", sans-serif;
   margin: 0 0 10px 0;
 }
 
@@ -163,14 +167,6 @@ article {
   font-weight: 400;
 }
 
-.productDescription {
-  margin: 0;
-  color: rgba(0, 0, 0, .55);
-  font-size: 14px;
-  font-weight: 400;
-  white-space: pre-wrap;
-  margin-bottom: 8px;
-}
 
 .productLocation {
   margin-left: auto;
@@ -179,16 +175,21 @@ article {
   text-transform: capitalize;
 }
 
-section {
+/*
+===============
+Product detail
+===============
+*/
+
+.container {
   width: 1184px;
-  margin: 0 auto;
 }
 
 .containerHeader {
   background-color: rgb(235, 235, 235);
-  padding: 12px 16px;
-  font-size: 14px;
   border-radius: 4px 4px 0 0;
+  font-size: 14px;
+  padding: 12px 16px;
 }
 
 .containerHeader a {
@@ -204,55 +205,70 @@ section {
 }
 
 .containerHeader a::after {
+  border-right: 1px solid rgba(0, 0, 0, .2);
   content: "";
   font-size: 8px;
   margin: 13px;
-  border-right: 1px solid rgba(0, 0, 0, .2);
 }
 
-.container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 16px;
-  gap: 1rem;
+.containerProduct {
   background-color: white;
   border-radius: 4px;
-  margin: 0 auto;
-  width: 100%;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  margin: 0 auto;
 }
 
-.container figure {
+.containerProductInfo {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.containerImages {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 10rem;
+  justify-content: center;
   margin: 56px auto 0;
-  padding: 16px;
   max-width: 700px;
+  padding: 16px;
 }
 
-.container img {
+.containerImages img {
+  aspect-ratio: auto 700 / 500;
   cursor: zoom-in;
   object-fit: contain;
   width: auto;
-  aspect-ratio: auto 700 / 500;
 }
 
-.container div {
+.containerProductInfo div {
+  border-radius: 4px;
+  border: 1px solid rgb(235, 235, 235);
+  left: 0;
   max-width: 326px;
   padding: 1.725rem;
   position: sticky;
   top: 30px;
-  left: 0;
-  border: 1px solid rgb(235, 235, 235);
-  border-radius: 4px;
+}
+
+.productCondition {
+  color: rgba(0, 0, 0, .55);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.productCondition span {
+  text-transform: capitalize;
 }
 
 .productTitleItem {
-  font-size: 22px;
   font-family: 600;
+  font-size: 22px;
   margin-bottom: 8px;
   margin-right: 28px;
   padding: 0;
@@ -260,7 +276,20 @@ section {
 
 .productPriceItem {
   font-size: 36px;
-  margin: 16px 0 0;
   font-weight: 400;
   line-height: 1;
+  margin: 16px 0 0;
+}
+
+.productDescription {
+  color: #666;
+  margin: 10px auto;
+  border-top: 1px solid rgb(0, 0, 0, 0.1);
+  width: 80%;
+  padding: 40px 0;
+  font-size: 20px;
+  margin-bottom: 8px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  line-height: 1.5;
 }

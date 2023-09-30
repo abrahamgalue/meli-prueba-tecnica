@@ -9,36 +9,37 @@ export default async function ItemPage({
   const item = await api.item.fetch(id)
 
   return (
-    <section>
+    <section className='container'>
       <div className='containerHeader'>
         <a href='/'>Volver al listado</a>
       </div>
-      <div className='container'>
-        <figure className='containerImages'>
-          {item.pictures?.map((picture, index) => (
-            <img
-              src={picture.secure_url}
-              alt={item.title}
-              key={index}
-              width={700}
-              height={500}
-            />
-          ))}
-        </figure>
-        <div>
-          <p className='productCondition'>
-            <span>{item.condition}</span> | +{item.sold_quantity} sold
-          </p>
-          <p className='productTitleItem'>{item.title}</p>
-          <p className='productPriceItem'>
-            {Number(item.price).toLocaleString('es-AR', {
-              style: 'currency',
-              currency: item.currency_id,
-            })}
-          </p>
-          <hr />
-          <Description id={id} />
+      <div className='containerProduct'>
+        <div className='containerProductInfo'>
+          <figure className='containerImages'>
+            {item.pictures?.map((picture, index) => (
+              <img
+                src={picture.secure_url}
+                alt={item.title}
+                key={index}
+                width={700}
+                height={500}
+              />
+            ))}
+          </figure>
+          <div>
+            <p className='productCondition'>
+              <span>{item.condition}</span> | +{item.sold_quantity} sold
+            </p>
+            <p className='productTitleItem'>{item.title}</p>
+            <p className='productPriceItem'>
+              {Number(item.price).toLocaleString('es-AR', {
+                style: 'currency',
+                currency: item.currency_id,
+              })}
+            </p>
+          </div>
         </div>
+        <Description id={id} />
       </div>
     </section>
   )
