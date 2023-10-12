@@ -1,6 +1,6 @@
+import Image from 'next/image'
 import api from '@/app/api'
 import Description from '@/app/components/Description'
-import Image from 'next/image'
 
 export default async function ItemPage({
   params: { id },
