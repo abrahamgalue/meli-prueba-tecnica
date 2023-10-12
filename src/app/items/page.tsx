@@ -19,7 +19,7 @@ export default async function ItemsPage({
     <section>
       <span className='breadcrum'>
         {bread?.map((category, index) => (
-          <span>
+          <span key={index}>
             <a href={`/items?search=${category.name}`}>{category.name}</a>
             {formatBread(index, bread.length)}
           </span>
@@ -27,7 +27,7 @@ export default async function ItemsPage({
       </span>
       <article>
         {results.map(item => (
-          <div>
+          <div key={item.id}>
             <Link href={`/items/${item.id}`} key={item.id} className='product'>
               <Image
                 src={item.thumbnail}
