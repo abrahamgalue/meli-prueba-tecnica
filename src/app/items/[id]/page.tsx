@@ -1,5 +1,6 @@
 import api from '@/app/api'
 import Description from '@/app/components/Description'
+import Image from 'next/image'
 
 export default async function ItemPage({
   params: { id },
@@ -18,12 +19,14 @@ export default async function ItemPage({
           <div className='containerInfo'>
             <figure className='containerImages'>
               {item.pictures?.map((picture, index) => (
-                <img
+                <Image
                   src={picture.secure_url}
                   alt={item.title}
-                  key={index}
                   width={700}
                   height={500}
+                  key={index}
+                  quality={100}
+                  priority
                 />
               ))}
             </figure>

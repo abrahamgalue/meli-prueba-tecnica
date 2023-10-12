@@ -237,7 +237,7 @@ Product detail
   aspect-ratio: auto 700 / 500;
   cursor: zoom-in;
   object-fit: contain;
-  width: auto;
+  /* width: auto; */
 }
 
 .cardProductInfo {
