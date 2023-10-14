@@ -23,6 +23,7 @@ export default async function ItemPage({
                   alt={item.title}
                   width={700}
                   height={500}
+                  key={item.id}
                 />
               ))}
             </figure>
