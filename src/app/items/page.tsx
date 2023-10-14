@@ -1,6 +1,5 @@
 // https://api.mercadolibre.com/sites/MLA/search?q=iphone&limit=4
 import Link from 'next/link'
-import Image from 'next/image'
 import api from '@/app/api'
 
 export default async function ItemsPage({
@@ -29,14 +28,11 @@ export default async function ItemsPage({
         {results.map(item => (
           <div key={item.id}>
             <Link href={`/items/${item.id}`} key={item.id} className='product'>
-              <Image
+              <img
                 src={item.thumbnail}
                 alt={item.title}
                 width={160}
                 height={160}
-                key={item.id}
-                quality={100}
-                priority
               />
               <div>
                 <p className='productTitle'>{item.title}</p>
