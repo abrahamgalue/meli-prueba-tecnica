@@ -8,7 +8,7 @@
 
 Este proyecto permite buscar productos de Mercado Libre y ver sus descripciones más detalladamente.
 
-🧩 Aquí puedes ver su [**Live Demo.**](https://meli-abraham.vercel.app/)
+🧩 Aquí puedes ver su [**Live Demo.**](https://meli-prueba-abraham.vercel.app/)
 
 Con el objetivo de practicar por primera vez con el framework de React Next.js, este proyecto utiliza:
 
