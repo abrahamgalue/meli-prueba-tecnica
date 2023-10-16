@@ -15,4 +15,3 @@ Con el objetivo de practicar por primera vez con el framework de React Next.js, 
 - La [**API**](https://developers.mercadolibre.com.ar/es_ar/items-y-busquedas) de **Mercado Libre** para realizar las búsquedas.
 - **TypeScript** para validar los resultados de la API.
 - [**Rutas dinámicas**](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes) para mostrar los productos más detallados.
-- El componente [**&lt;Image&gt;**](https://nextjs.org/docs/app/api-reference/components/image) de Next.js para optimizar las imágenes.
