@@ -6,11 +6,19 @@
 
 ### 🛍 Prueba técnica de mercado libre hecha con Next.js
 
+> 🧩 Aquí puedes ver su [**Live Demo.**](https://meli-prueba-abraham.vercel.app/)
+
+![vista-previa](./public/preview/01-page-preview.png)
+
+## 🚀 Descripción
+
 Este proyecto permite buscar productos de Mercado Libre y ver sus descripciones más detalladamente.
 
-🧩 Aquí puedes ver su [**Live Demo.**](https://meli-prueba-abraham.vercel.app/)
+Con el objetivo de practicar por primera vez con el framework de React Next.js.
 
-Con el objetivo de practicar por primera vez con el framework de React Next.js, este proyecto utiliza:
+## 🎭 Tecnologías
+
+El proyecto utiliza las siguientes tecnologías:
 
 - La [**API**](https://developers.mercadolibre.com.ar/es_ar/items-y-busquedas) de **Mercado Libre** para realizar las búsquedas.
 - **TypeScript** para validar los resultados de la API.
