@@ -25,7 +25,7 @@ export default function RootLayout({
         <header className='header'>
           <div className='headerContainer'>
             <Link href='/' className='logo'>
-              MercaLibre
+              Meli Frontend
             </Link>
             <form action='/items' className='field'>
               <input
