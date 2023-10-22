@@ -4,10 +4,14 @@ async function Description({ id }: { id: string }) {
   const description = await api.item.description.fetch(id)
 
   return (
-    <div className='productDescription'>
-      <h2>Descripción</h2>
-      <p>{description}</p>
-    </div>
+    <>
+      {description ? (
+        <div className='productDescription'>
+          <h2>Descripción</h2>
+          <p>{description}</p>
+        </div>
+      ) : null}
+    </>
   )
 }
 
