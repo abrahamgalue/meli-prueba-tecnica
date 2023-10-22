@@ -258,6 +258,7 @@ Product detail
   font-weight: 400;
   margin: 0 0 8px;
   white-space: pre-wrap;
+  user-select: none;
 }
 
 .productCondition span {
@@ -275,6 +276,7 @@ Product detail
   margin: 0 28px 8px 0;
   padding: 0;
   flex: 1;
+  user-select: none;
 }
 
 .containerProductTitle svg,
@@ -299,6 +301,7 @@ Product detail
   font-weight: 300;
   line-height: 1;
   margin: 16px 0 0;
+  user-select: none;
 }
 
 .productDescription {
@@ -343,6 +346,7 @@ Product detail
   height: 48px;
   border-radius: 8px;
   transition: background-color .2s ease-in;
+  user-select: none;
 }
 
 .btnBuy:hover {
