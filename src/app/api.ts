@@ -76,11 +76,6 @@ const api = {
               thumbnail: string
               price: number
               currency_id: string
-              seller_address: {
-                city: {
-                  name: string
-                }
-              }
             }[]
             filters: {
               values: {

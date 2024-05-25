@@ -43,9 +43,6 @@ export default async function ItemsPage({
                   })}
                 </p>
               </div>
-              <span className='productLocation'>
-                {item.seller_address.city.name.toLocaleLowerCase()}
-              </span>
             </Link>
           </div>
         ))}
