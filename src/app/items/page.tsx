@@ -15,7 +15,7 @@ export default async function ItemsPage({
   }
 
   return (
-    <section>
+    <section style={{ marginTop: '82px' }}>
       <span className='breadcrum'>
         {bread?.map((category, index) => (
           <span key={index}>

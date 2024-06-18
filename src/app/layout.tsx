@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google'
 
 import './globals.css'
 import Link from 'next/link'
+import { ReactNode } from 'react'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -14,11 +15,7 @@ export const metadata: Metadata = {
   description: 'Test of Meli API',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en' className={montserrat.className}>
       <body>
