@@ -1,7 +1,7 @@
 'use client'
 import './ImagesSlider.css'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowIcon } from '../icons/Icons'
 
 interface Props {
@@ -27,6 +27,16 @@ export function ImagesSlider({ images }: Props) {
       return index - 1
     })
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex(index => {
+        return index === images.length - 1 ? 0 : index + 1
+      })
+    }, 6000)
+
+    return () => clearInterval(interval)
+  }, [images, imageIndex])
 
   return (
     <section
