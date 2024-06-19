@@ -11,7 +11,7 @@ export default function Home() {
         aspectRatio: '16/9',
       }}
     >
-      <ImagesSlider imgUrls={IMAGES} />
+      <ImagesSlider images={IMAGES} />
     </div>
   )
 }
