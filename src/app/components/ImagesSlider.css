@@ -8,7 +8,6 @@ main {
   flex-shrink: 0;
   height: 100%;
   object-fit: cover;
-  transition: translate 0.5s ease-in-out;
   width: 100%;
 }
 
@@ -42,7 +41,8 @@ main {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .12);
 }
 
-.img-slider-btn:focus-within {
+.img-slider-btn:focus-within,
+.img-slider-btn:focus-visible {
   -moz-box-shadow: 0 0 0 2px #fff, 0 0 0 3px #2968c8, 0 0 0 5px rgba(65, 137, 230, .3);
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 3px #2968c8, 0 0 0 5px rgba(65, 137, 230, .3);
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px #2968c8, 0 0 0 5px rgba(65, 137, 230, .3);
@@ -103,5 +103,11 @@ main {
     height: 500px;
     max-width: 1920px;
     object-fit: none;
+  }
+}
+
+@media not (prefers-reduced-motion) {
+  .slider-img {
+    transition: translate 0.32s ease-in-out;
   }
 }
