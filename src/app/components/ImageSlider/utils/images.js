@@ -1,22 +1,28 @@
+import img1 from '$/carousel/01-carousel-img.webp'
+import img2 from '$/carousel/02-carousel-img.webp'
+import img3 from '$/carousel/03-carousel-img.webp'
+import img4 from '$/carousel/04-carousel-img.webp'
+import img5 from '$/carousel/05-carousel-img.webp'
+
 export const IMAGES = [
   {
-    url: 'https://http2.mlstatic.com/D_NQ_863171-MLA76338099217_052024-OO.webp',
+    url: img1.src,
     alt: '77 Innovation March discounts'
   },
   {
-    url: 'https://http2.mlstatic.com/D_NQ_792140-MLA76970349287_062024-OO.webp',
+    url: img2.src,
     alt: 'Discount image to enjoy the Copa America'
   },
   {
-    url: 'https://http2.mlstatic.com/D_NQ_886249-MLA76939315609_062024-OO.webp',
+    url: img3.src,
     alt: 'PCshops discount image for electronics products'
   },
   {
-    url: 'https://http2.mlstatic.com/D_NQ_645464-MLA77095983527_062024-OO.webp',
+    url: img4.src,
     alt: 'PRO PAC super premium holistic pet food promotion'
   },
   {
-    url: 'https://http2.mlstatic.com/D_NQ_967875-MLA75595473640_042024-OO.webp',
+    url: img5.src,
     alt: 'Holiday product discount image'
   }
 ]

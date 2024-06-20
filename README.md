@@ -8,7 +8,7 @@
 
 > 🧩 Aquí puedes ver su [**Live Demo.**](https://meli-prueba-abraham.vercel.app/)
 
-![vista-previa](./public/preview/01-page-preview.jpg)
+![vista-previa](./public/images/preview/01-page-preview.jpg)
 
 ## 🚀 Descripción
 
