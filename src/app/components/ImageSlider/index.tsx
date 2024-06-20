@@ -1,8 +1,8 @@
 'use client'
-import './ImagesSlider.css'
+import './ImageSlider.css'
 
 import { useState, useEffect } from 'react'
-import { ArrowIcon } from '../icons/Icons'
+import { ArrowIcon } from '../Icons'
 
 interface Props {
   images: {

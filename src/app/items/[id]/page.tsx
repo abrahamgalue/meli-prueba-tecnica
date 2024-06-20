@@ -1,6 +1,6 @@
 import api from '@/app/api'
 import Description from '@/app/components/Description'
-import { ShowHeartIcon, HelpCircle } from '@/app/icons/Icons'
+import { ShowHeartIcon, HelpCircle } from '@/app/components/Icons'
 
 export default async function ItemPage({
   params: { id },

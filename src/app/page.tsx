@@ -1,5 +1,5 @@
-import { ImagesSlider } from './components/ImagesSlider'
-import { IMAGES } from '@/app/images'
+import { ImagesSlider } from './components/ImageSlider'
+import { IMAGES } from '@/app/components/ImageSlider/utils/images'
 
 export default function Home() {
   return (
