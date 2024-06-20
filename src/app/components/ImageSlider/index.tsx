@@ -83,7 +83,7 @@ export function ImagesSlider({ images }: Props) {
       <div
         style={{
           position: 'absolute',
-          bottom: '1.25rem',
+          bottom: '30%',
           left: '50%',
           translate: '-50%',
           display: 'flex',
@@ -105,6 +105,7 @@ export function ImagesSlider({ images }: Props) {
           </button>
         ))}
       </div>
+      <div className='gradient'></div>
     </section>
   )
 }
