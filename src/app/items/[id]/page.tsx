@@ -1,4 +1,5 @@
 import api from '@/app/api'
+import BackHistoryBtn from '@/app/components/BackHistoryBtn'
 import Description from '@/app/components/Description'
 import ShowHeartIcon from '@/app/components/Icons/ShowHeartIcon'
 import { HelpCircle } from '@/app/components/Icons'
@@ -13,7 +14,7 @@ export default async function ItemPage({
   return (
     <section className='container'>
       <div className='containerHeader'>
-        <a href='/'>Volver al listado</a>
+        <BackHistoryBtn />
       </div>
       <div className='containerProduct'>
         <div className='containerProductInfo'>
