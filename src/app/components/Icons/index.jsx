@@ -1,6 +1,3 @@
-'use client'
-import { useState } from 'react'
-
 export function Heart() {
   return (
     <svg
@@ -59,20 +56,6 @@ export function HelpCircle() {
       <path d='M12 16v.01'></path>
       <path d='M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483'></path>
     </svg>
-  )
-}
-
-export function ShowHeartIcon() {
-  const [heart, setHeart] = useState(false)
-
-  return (
-    <div
-      onClick={() => {
-        setHeart(!heart)
-      }}
-    >
-      {heart ? <HeartFilled /> : <Heart />}
-    </div>
   )
 }
 
