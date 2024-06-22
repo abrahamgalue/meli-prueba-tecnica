@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang='en' className={montserrat.className}>
       <body>
         <header className='header'>
-          <div className='headerContainer'>
+          <div className='header-container'>
             <Link href='/' className='logo'>
               Meli Frontend
             </Link>

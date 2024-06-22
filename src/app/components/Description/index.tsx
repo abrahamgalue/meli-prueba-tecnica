@@ -1,3 +1,4 @@
+import styles from './description.module.css'
 import api from '@/app/api'
 
 async function Description({ id }: { id: string }) {
@@ -6,7 +7,7 @@ async function Description({ id }: { id: string }) {
   return (
     <>
       {description ? (
-        <div className='productDescription'>
+        <div className={styles.productDescription}>
           <h2>Descripción</h2>
           <p>{description}</p>
         </div>

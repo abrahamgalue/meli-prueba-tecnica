@@ -1,0 +1,30 @@
+/*
+===============
+Product Description
+===============
+*/
+
+.productDescription {
+  margin: 10px auto;
+  border-top: 1px solid rgb(0, 0, 0, 0.1);
+  width: 90%;
+  padding: 40px 0;
+  margin-bottom: 8px;
+}
+
+.productDescription p {
+  color: #666;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.productDescription h2 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 24px;
+}

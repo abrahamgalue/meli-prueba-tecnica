@@ -1,5 +1,6 @@
-import api from '@/app/api'
+import styles from './styles.module.css'
 import BackHistoryBtn from '@/app/components/BackHistoryBtn'
+import api from '@/app/api'
 import Description from '@/app/components/Description'
 import ShowHeartIcon from '@/app/components/Icons/ShowHeartIcon'
 import { HelpCircle } from '@/app/components/Icons'
@@ -12,14 +13,14 @@ export default async function ItemPage({
   const item = await api.item.fetch(id)
 
   return (
-    <section className='container'>
-      <div className='containerHeader'>
+    <section className={styles.container}>
+      <div className={styles.headerContainer}>
         <BackHistoryBtn />
       </div>
-      <div className='containerProduct'>
-        <div className='containerProductInfo'>
-          <div className='containerInfo'>
-            <figure className='containerImages'>
+      <div className={styles.productContainer}>
+        <div className={styles.productContainerInfo}>
+          <div className={styles.infoContainer}>
+            <figure className={styles.infoContainerImages}>
               {item.pictures?.map((picture, index) => (
                 <img
                   src={picture.secure_url}
@@ -32,16 +33,16 @@ export default async function ItemPage({
             </figure>
             <Description id={id} />
           </div>
-          <div className='cardProductInfo'>
-            <p className='productCondition'>
+          <div className={styles.productCardInfo}>
+            <p className={styles.productCardInfoCondition}>
               <span>{item.condition}</span> | +{item.sold_quantity} sold
             </p>
-            <div className='containerProductTitle'>
-              <h1 className='productTitleItem'>{item.title}</h1>
+            <div className={styles.productCardInfoTitle}>
+              <h1 className={styles.productCardInfoTitleItem}>{item.title}</h1>
               <ShowHeartIcon />
             </div>
-            <div className='containerProductPrice'>
-              <p className='productPriceItem'>
+            <div className={styles.productCardPrice}>
+              <p className={styles.productCardPriceItem}>
                 {Number(item.price).toLocaleString('es-AR', {
                   style: 'currency',
                   currency: item.currency_id,
@@ -49,7 +50,9 @@ export default async function ItemPage({
               </p>
               <HelpCircle />
             </div>
-            <button className='btnBuy'>Comprar ahora</button>
+            <button className={styles.productCardInfoBuyBtn}>
+              Comprar ahora
+            </button>
           </div>
         </div>
       </div>

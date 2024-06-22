@@ -1,5 +1,5 @@
 'use client'
-import './ImageSlider.css'
+import styles from './image-slider.module.css'
 
 import { useState, useEffect } from 'react'
 import { ArrowIcon } from '../Icons'
@@ -38,26 +38,22 @@ export function ImagesSlider({ images }: Props) {
     return () => clearInterval(interval)
   }, [images, imageIndex])
 
+  const imageSliderDotBtnClassName = (index: number) =>
+    [
+      styles.carouselSectionDotBtn,
+      `${index === imageIndex ? ' ' + styles.active : ''}`,
+    ].join('')
+
   return (
-    <section
-      aria-label='Image Carousel'
-      style={{ width: '100%', height: '100%', position: 'relative' }}
-    >
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          overflow: 'hidden',
-        }}
-      >
+    <section aria-label='Image Carousel' className={styles.carouselSection}>
+      <div className={styles.carouselSectionImages}>
         {images.map(({ url, alt }, index) => (
           <img
             key={url}
             src={url}
             alt={alt}
             aria-hidden={imageIndex !== index}
-            className='slider-img'
+            className={styles.carouselSectionImage}
             width={1920}
             height={505}
             style={{
@@ -68,44 +64,36 @@ export function ImagesSlider({ images }: Props) {
       </div>
       <button
         onClick={showPrevImage}
-        className='img-slider-btn previous'
+        className={[styles.carouselSectionSliderBtn, styles.prev].join(' ')}
         aria-label='View Previous Image'
       >
         <ArrowIcon aria-hidden />
       </button>
       <button
         onClick={showNextImage}
-        className='img-slider-btn next'
+        className={[styles.carouselSectionSliderBtn, styles.next].join(' ')}
         aria-label='View Next Image'
       >
         <ArrowIcon aria-hidden />
       </button>
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '30%',
-          left: '50%',
-          translate: '-50%',
-          display: 'flex',
-          gap: '.1rem',
-        }}
-      >
+      <div className={styles.carouselSectionDotBtnContainer}>
         {images.map((_, index) => (
           <button
             key={index}
-            className={`img-slider-dot-btn ${
-              index === imageIndex ? 'active' : null
-            }`}
+            className={imageSliderDotBtnClassName(index)}
             onClick={() => setImageIndex(index)}
             aria-label={`View Image ${index + 1}`}
           >
-            <span className='img-slider-dot-btn-span' aria-hidden={true}>
+            <span
+              className={styles.carouselSectionDotBtnSpan}
+              aria-hidden={true}
+            >
               Página {index}
             </span>
           </button>
         ))}
       </div>
-      <div className='gradient'></div>
+      <div className={styles.carouselSectionGradient}></div>
     </section>
   )
 }
