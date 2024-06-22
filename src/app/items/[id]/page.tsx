@@ -35,7 +35,7 @@ export default async function ItemPage({
           </div>
           <div className={styles.productCardInfo}>
             <p className={styles.productCardInfoCondition}>
-              <span>{item.condition}</span> | +{item.sold_quantity} sold
+              <span>{item.condition}</span>
             </p>
             <div className={styles.productCardInfoTitle}>
               <h1 className={styles.productCardInfoTitleItem}>{item.title}</h1>
@@ -48,11 +48,17 @@ export default async function ItemPage({
                   currency: item.currency_id,
                 })}
               </p>
-              <HelpCircle />
+              <div title='This price is in Argentine pesos'>
+                <HelpCircle />
+              </div>
             </div>
-            <button className={styles.productCardInfoBuyBtn}>
+            <a
+              href={item.permalink}
+              target='_blank'
+              className={styles.productCardInfoBuyBtn}
+            >
               Comprar ahora
-            </button>
+            </a>
           </div>
         </div>
       </div>

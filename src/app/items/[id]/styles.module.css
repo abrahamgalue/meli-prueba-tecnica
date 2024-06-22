@@ -145,20 +145,27 @@ Product detail
 }
 
 .productCardInfoBuyBtn {
-  margin-top: 26px;
-  width: 100%;
+  align-items: center;
   background-color: #3483fa;
-  border-color: transparent;
+  border-radius: 8px;
   color: #fff;
-  cursor: pointer;
+  display: flex;
   font-size: 16px;
   font-weight: 500;
   height: 48px;
-  border-radius: 8px;
+  justify-content: center;
+  margin-top: 26px;
+  text-decoration: none;
   transition: background-color .2s ease-in;
   user-select: none;
+  width: 100%;
 }
 
 .productCardInfoBuyBtn:hover {
   background-color: #2968c8;
+  cursor: pointer;
+}
+
+.productCardInfoBuyBtn:focus-visible {
+  border: 1px solid black;
 }

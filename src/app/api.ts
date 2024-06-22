@@ -23,8 +23,8 @@ const api = {
             thumbnail: string
             price: number
             currency_id: string
-            sold_quantity: number
             condition: string
+            permalink: string
             pictures: [
               {
                 secure_url: string
