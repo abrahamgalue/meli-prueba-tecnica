@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
-
 import './globals.css'
-import Link from 'next/link'
-import { ReactNode } from 'react'
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
+import localFont from 'next/font/local'
+import type { Metadata } from 'next'
+
+import { ReactNode } from 'react'
+import Link from 'next/link'
+
+const montserrat = localFont({
+  src: './fonts/Montserrat-VariableFont_wght.ttf',
 })
 
 export const metadata: Metadata = {
