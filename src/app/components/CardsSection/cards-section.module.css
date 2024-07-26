@@ -1,0 +1,13 @@
+.cardsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 42px auto;
+  max-width: 1180px;
+}
+
+@media screen and (width < 1180px) {
+  .cardsSection {
+    margin: 42px 24px;
+  }
+}

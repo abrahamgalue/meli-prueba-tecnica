@@ -1,0 +1,19 @@
+.cardsArticle {
+  flex: 1;
+}
+
+.link {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+  display: flex;
+  line-height: 1.1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cardsInfoContainer {
+  display: flex;
+  flex: 1;
+  position: relative;
+}

@@ -1,0 +1,15 @@
+.cardsPicture {
+  height: 250px;
+  overflow: hidden;
+}
+
+.cardsPicture img {
+  border-radius: 5px;
+  height: 100%;
+}
+
+@media screen and (width < 1180px) {
+  .cardsPicture {
+    flex: 1;
+  }
+}

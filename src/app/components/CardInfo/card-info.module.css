@@ -1,0 +1,25 @@
+.cardsInfo {
+  align-items: flex-start;
+  align-self: center;
+  color: #4b4b4b;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 32px 10px 32px 32px;
+  position: absolute;
+  width: 270px;
+  z-index: 1;
+}
+
+.thin {
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.strong {
+  font-size: 20px;
+  font-weight: 600;
+}
