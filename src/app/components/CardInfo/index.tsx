@@ -8,13 +8,11 @@ interface Props {
 export default function CardInfo({ textInfo }: Props) {
   return (
     <div className={styles.cardsInfo}>
-      {textInfo.map((text, index) => {
-        return index === 0 ? (
-          <span className={styles.thin}>{text}</span>
-        ) : (
-          <span className={styles.strong}>{text}</span>
-        )
-      })}
+      {textInfo.map((text, index) => (
+        <span key={index} className={index === 0 ? styles.thin : styles.strong}>
+          {text}
+        </span>
+      ))}
       <ShowMore />
     </div>
   )
