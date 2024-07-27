@@ -44,9 +44,9 @@ export default async function ItemsPage({
                   {item.title}
                 </p>
                 <p className={styles.resultsSectionArticleProductPrice}>
-                  {Number(item.price).toLocaleString('es-AR', {
+                  {Number(item.price * 0.0011).toLocaleString('en-US', {
                     style: 'currency',
-                    currency: item.currency_id,
+                    currency: 'USD',
                   })}
                 </p>
               </div>

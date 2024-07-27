@@ -43,9 +43,9 @@ export default async function ItemPage({
             </div>
             <div className={styles.productCardPrice}>
               <p className={styles.productCardPriceItem}>
-                {Number(item.price).toLocaleString('es-AR', {
+                {Number(item.price * 0.0011).toLocaleString('en-US', {
                   style: 'currency',
-                  currency: item.currency_id,
+                  currency: 'USD',
                 })}
               </p>
               <div title='This price is in Argentine pesos'>
