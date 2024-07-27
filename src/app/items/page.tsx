@@ -39,15 +39,22 @@ export default async function ItemsPage({
                 width={160}
                 height={160}
               />
-              <div>
+              <div className={styles.resultsSectionArticleProductContainer}>
                 <p className={styles.resultsSectionArticleProductTitle}>
                   {item.title}
                 </p>
                 <p className={styles.resultsSectionArticleProductPrice}>
+                  US{' '}
                   {Number(item.price * 0.0011).toLocaleString('en-US', {
                     style: 'currency',
                     currency: 'USD',
                   })}
+                </p>
+                <p className={styles.resultsSectionArticleProductCondition}>
+                  {item.condition}
+                </p>
+                <p className={styles.resultsSectionArticleProductQuantity}>
+                  (+{item.available_quantity} available)
                 </p>
               </div>
             </Link>

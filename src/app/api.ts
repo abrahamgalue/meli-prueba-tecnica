@@ -66,16 +66,18 @@ const api = {
     },
     search: (query: string) =>
       fetch(
-        `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=10`
+        `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=48`
       ).then(
         res =>
           res.json() as Promise<{
             results: {
               id: string
               title: string
+              condition: string
               thumbnail: string
               price: number
               currency_id: string
+              available_quantity: number
             }[]
             filters: {
               values: {
